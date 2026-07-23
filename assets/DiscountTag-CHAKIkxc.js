@@ -1,0 +1,1 @@
+import{b as e,mt as t,w as n,z as r}from"./vue-i18n-CcZGMX21.js";import{h as i}from"./index-DgzS_7km.js";var a={class:`discount-tag`},o=i(n({__name:`DiscountTag`,props:{content:{}},setup(n){return(i,o)=>(r(),e(`span`,a,t(n.content),1))}}),[[`__scopeId`,`data-v-fd13b2a1`]]);export{o as t};
