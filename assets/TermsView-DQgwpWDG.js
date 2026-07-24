@@ -1,0 +1,1 @@
+import{C as e,b as t,g as n,w as r,z as i}from"./vue-i18n-CcZGMX21.js";import{d as a}from"./index-DB58Bg6Z.js";import{n as o,t as s}from"./legal-DPIO4GPJ.js";var c={"data-seo-ready":`terms`},l=r({__name:`TermsView`,setup(r){let{currentLocale:l}=a(),u=n(()=>s(`terms`,l.value));return(n,r)=>(i(),t(`div`,c,[e(o,{content:u.value},null,8,[`content`])]))}});export{l as default};
