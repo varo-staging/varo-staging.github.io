@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <style cssr-id="n-base-loading">@keyframes rotator {
+
+ 0% {
+ -webkit-transform: rotate(0deg);
+ transform: rotate(0deg);
+ }
+ 100% {
+ -webkit-transform: rotate(360deg);
+ transform: rotate(360deg);
+ }
+}
+
+.n-base-loading {
+
+ position: relative;
+ line-height: 0;
+ width: 1em;
+ height: 1em;
+ 
+}
+
+.n-base-loading .n-base-loading__transition-wrapper {
+
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ 
+}
+
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-from, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-to {
+  transform:  scale(0.75);
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-to, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-from {
+  transform: scale(1) ;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-active, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-active {
+  transform-origin: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1) !important;
+}
+
+.n-base-loading .n-base-loading__placeholder {
+
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translateX(-50%) translateY(-50%);
+ 
+}
+
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-from, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-to {
+  transform: translateX(-50%) translateY(-50%) scale(0.75);
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-to, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-from {
+  transform: scale(1) translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+}
+
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-active, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-active {
+  transform-origin: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1) !important;
+}
+
+.n-base-loading .n-base-loading__container {
+
+ animation: rotator 3s linear infinite both;
+ 
+}
+
+.n-base-loading .n-base-loading__container .n-base-loading__icon {
+
+ height: 1em;
+ width: 1em;
+ 
+}</style><style cssr-id="n-global">body {
+
+ margin: 0;
+ font-size: 14px;
+ font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ line-height: 1.6;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: transparent;
+
+}
+
+body input {
+
+ font-family: inherit;
+ font-size: inherit;
+ 
+}</style><style cssr-id="n-spin">@keyframes spin-rotate {
+
+ from {
+ transform: rotate(0);
+ }
+ to {
+ transform: rotate(360deg);
+ }
+ 
+}
+
+.n-spin-container {
+
+ position: relative;
+ 
+}
+
+.n-spin-container .n-spin-body {
+
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+ 
+}
+
+.n-spin-container .n-spin-body.fade-in-transition-enter-active {
+  transition: all 0.2s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-spin-container .n-spin-body.fade-in-transition-leave-active {
+  transition: all 0.2s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-spin-container .n-spin-body.fade-in-transition-enter-from, .n-spin-container .n-spin-body.fade-in-transition-leave-to {
+  opacity: 0;
+}
+
+.n-spin-container .n-spin-body.fade-in-transition-leave-from, .n-spin-container .n-spin-body.fade-in-transition-enter-to {
+  opacity: 1;
+}
+
+.n-spin-body {
+
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ 
+}
+
+.n-spin {
+
+ display: inline-flex;
+ height: var(--n-size);
+ width: var(--n-size);
+ font-size: var(--n-size);
+ color: var(--n-color);
+ 
+}
+
+.n-spin.n-spin--rotate {
+
+ animation: spin-rotate 2s linear infinite;
+ 
+}
+
+.n-spin-description {
+
+ display: inline-block;
+ font-size: var(--n-font-size);
+ color: var(--n-text-color);
+ transition: color .3s var(--n-bezier);
+ margin-top: 8px;
+ 
+}
+
+.n-spin-content {
+
+ opacity: 1;
+ transition: opacity .3s var(--n-bezier);
+ pointer-events: all;
+ 
+}
+
+.n-spin-content.n-spin-content--spinning {
+
+ user-select: none;
+ -webkit-user-select: none;
+ pointer-events: none;
+ opacity: var(--n-opacity-spinning);
+ 
+}</style><link rel="icon" type="image/svg+xml" href="/assets/brand/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 生成器 — Varo.cloud</title>
+    <meta name="description" content="使用 Varo.cloud AI 模型生成图像、视频等内容——无需自建基础设施。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Varo.cloud">
+    <meta property="og:title" content="AI 生成器 — Varo.cloud">
+    <meta property="og:description" content="使用 Varo.cloud AI 模型生成图像、视频等内容——无需自建基础设施。">
+    <meta property="og:url" content="https://varo.cloud/zh-CN/ai-generator">
+    <meta property="og:image" content="https://varo.cloud/assets/brand/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://varo.cloud/zh-CN/ai-generator">
+    <script type="module" crossorigin="" src="/assets/index-C1gHWSTS.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/vue-i18n-CcZGMX21.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/light-K7Vr6XTT.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DuHPWckQ.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D9M30NLKB0"></script><link rel="modulepreload" as="script" crossorigin="" href="/assets/AppLayout--0dMLEnW.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/AppFooter-J3SyUQgM.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/user-BeRVRPfs.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/currency-ndeZ96yb.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/docsUrl-oZ_XhqKc.js"><link rel="stylesheet" crossorigin="" href="/assets/AppFooter-CITQL4N7.css"><link rel="stylesheet" crossorigin="" href="/assets/AppLayout-DCU4_bJP.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/AiGeneratorView-qqFVA0_F.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Spin-Be0AA7xL.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/usePlaygroundExamples-sM5NrZBT.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/playground-request-snippets-B5Kagj5Z.js"><link rel="stylesheet" crossorigin="" href="/assets/playground-request-snippets-C_wodDAN.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/SelectDropdown-kZ3P1HBI.js"><link rel="stylesheet" crossorigin="" href="/assets/SelectDropdown-CeiRaAqG.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/capability-DMjydIjk.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/NumberStepperInput-Cdr91_wy.js"><link rel="stylesheet" crossorigin="" href="/assets/NumberStepperInput-DFfLzNTo.css"><link rel="stylesheet" crossorigin="" href="/assets/usePlaygroundExamples-aLFhV1pR.css"><link rel="stylesheet" crossorigin="" href="/assets/AiGeneratorView-XhnLeVR0.css"><meta name="robots" content="index, follow"><meta property="og:locale" content="zh_CN"><meta name="twitter:title" content="AI 生成器 — Varo.cloud"><meta name="twitter:description" content="使用 Varo.cloud AI 模型生成图像、视频等内容——无需自建基础设施。"><meta name="twitter:image" content="https://varo.cloud/assets/brand/logo.svg"><link rel="alternate" hreflang="en" href="https://varo.cloud/ai-generator"><link rel="alternate" hreflang="zh-CN" href="https://varo.cloud/zh-CN/ai-generator"><link rel="alternate" hreflang="x-default" href="https://varo.cloud/ai-generator"></head>
+  <body>
+    <div id="app" data-v-app=""><div class="n-config-provider"><div data-v-92e1d0f6="" class="app-layout app-layout--full-bleed"><header data-v-adc4bfe2="" data-v-92e1d0f6="" class="app-header app-header--transparent"><div data-v-adc4bfe2="" class="app-header__inner"><div data-v-adc4bfe2="" class="app-header__left"><a data-v-adc4bfe2="" href="/zh-CN" class="router-link-active app-header__logo" aria-label="Varo.cloud"><span data-v-76ae08aa="" data-v-adc4bfe2="" class="varo-cloud-logo varo-cloud-logo--dark"><img data-v-76ae08aa="" class="varo-cloud-logo__mascot" src="/assets/brand/logo.svg" alt="" width="54" height="54"><img data-v-76ae08aa="" class="varo-cloud-logo__wordmark" src="/assets/brand/varo-wordmark.svg" alt="Varo.cloud" width="141" height="20"></span></a><nav data-v-adc4bfe2="" class="app-header__nav hidden md:flex"><button data-v-adc4bfe2="" type="button" class="app-header__nav-item">模型</button><button data-v-adc4bfe2="" type="button" class="app-header__nav-item is-active">AI 生成器</button><button data-v-adc4bfe2="" type="button" class="app-header__nav-item">价格</button><button data-v-adc4bfe2="" type="button" class="app-header__nav-item">文档</button></nav></div><div data-v-adc4bfe2="" class="app-header__right"><div data-v-adc4bfe2="" class="app-header__language-menu"><button data-v-adc4bfe2="" type="button" class="app-header__icon-btn" aria-expanded="false" aria-haspopup="menu" aria-label="语言"><span data-v-0eceb54f="" data-v-adc4bfe2="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/globe.svg&quot;);"></span></button><div data-v-adc4bfe2="" class="app-header__language-dropdown" role="menu" style="display: none;"><button data-v-adc4bfe2="" type="button" class="app-header__language-dropdown-item" role="menuitem"><span data-v-adc4bfe2="">English</span></button><button data-v-adc4bfe2="" type="button" class="app-header__language-dropdown-item is-active" role="menuitem"><span data-v-adc4bfe2="">简体中文</span></button></div></div><button data-v-adc4bfe2="" type="button" class="app-header__login-btn">登录</button><button data-v-adc4bfe2="" type="button" class="app-header__menu-btn md:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="app-header-mobile-nav"><svg data-v-adc4bfe2="" class="app-header__menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path data-v-adc4bfe2="" d="M2.5 5H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path data-v-adc4bfe2="" d="M2.5 10H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path data-v-adc4bfe2="" d="M2.5 15H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button></div></div></header><main data-v-92e1d0f6="" class="app-layout__main"><div data-v-92e1d0f6="" class="app-layout__full"><div data-v-17eaacd6="" data-v-92e1d0f6="" class="ai-generator-page" data-seo-ready="ai-generator"><div data-v-17eaacd6="" class="ai-generator-page__state"><p data-v-17eaacd6="">加载模型列表失败，请重试。</p></div></div></div></main><footer data-v-01b8f809="" data-v-92e1d0f6="" class="app-footer"><div data-v-01b8f809="" class="app-footer__inner"><nav data-v-01b8f809="" class="app-footer__links" aria-label="页脚"><a data-v-01b8f809="" href="/zh-CN/terms" class="">服务条款</a><a data-v-01b8f809="" href="/zh-CN/privacy" class="">隐私政策</a></nav><div data-v-01b8f809="" class="app-footer__social" aria-label="联系方式"><a data-v-01b8f809="" class="app-footer__social-link" href="https://discord.gg/8TnkW8GPZ" target="_blank" rel="noopener noreferrer" aria-label="Discord"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/discord.svg&quot;);"></span></a><a data-v-01b8f809="" class="app-footer__social-link" href="mailto:support@varo.cloud" aria-label="联系客服"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/email.svg&quot;);"></span></a><a data-v-01b8f809="" class="app-footer__social-link" href="https://x.com/varocloud" target="_blank" rel="noopener noreferrer" aria-label="X"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/x.svg&quot;);"></span></a><a data-v-01b8f809="" class="app-footer__social-link" href="https://www.youtube.com/@varo_cloud" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/youtube.svg&quot;);"></span></a><a data-v-01b8f809="" class="app-footer__social-link" href="https://www.linkedin.com/company/varo-cloud/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/linedin.svg&quot;);"></span></a><a data-v-01b8f809="" class="app-footer__social-link" href="https://www.reddit.com/r/VaroCloud/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><span data-v-0eceb54f="" data-v-01b8f809="" class="app-icon" aria-hidden="true" style="width: 16px; height: 16px; mask-image: url(&quot;/assets/icons/reddit.svg&quot;);"></span></a></div></div></footer></div></div></div>
+  
+
+<div data-v-eb15a4ca="" class="app-message-viewport" aria-live="polite" aria-relevant="additions"><div data-v-eb15a4ca="" class="app-message-viewport__list"></div></div><!----></body></html>
