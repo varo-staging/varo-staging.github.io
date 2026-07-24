@@ -1,0 +1,1 @@
+import{C as e,b as t,g as n,w as r,z as i}from"./vue-i18n-CcZGMX21.js";import{d as a}from"./index-9L3-5i4-.js";import{n as o,t as s}from"./legal-DPIO4GPJ.js";var c={"data-seo-ready":`privacy`},l=r({__name:`PrivacyView`,setup(r){let{currentLocale:l}=a(),u=n(()=>s(`privacy`,l.value));return(n,r)=>(i(),t(`div`,c,[e(o,{content:u.value},null,8,[`content`])]))}});export{l as default};
