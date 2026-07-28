@@ -1,1 +1,0 @@
-function e(){return`https://varocloudtest.mintlify.site/docs`}function t(t){let n=e();if(n){window.open(n,`_blank`,`noopener,noreferrer`);return}t?.()}export{t as n,e as t};
