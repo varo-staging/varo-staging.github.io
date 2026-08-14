@@ -1,0 +1,1 @@
+function e(e){return Number.isFinite(e)?String(e).replace(/(\.\d*?)0+$/,`$1`).replace(/\.$/,``):`0`}function t(t){return`$${e(t)}`}function n(e){return e/100}export{t as n,n as t};

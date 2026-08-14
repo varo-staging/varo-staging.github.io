@@ -1,1 +1,0 @@
-function e(e){return Number.isFinite(e)?String(e).replace(/(\.\d*?)0+$/,`$1`).replace(/\.$/,``):`0`}function t(t){return`$${e(t)}`}export{t};
