@@ -1,1 +1,0 @@
-var e=`varo_pending_invite_code`;function t(t){let n=t.trim();n&&sessionStorage.setItem(e,n)}function n(){return sessionStorage.getItem(e)?.trim()||null}function r(){sessionStorage.removeItem(e)}function i(e,t){let r=n();return r?e(`/invite/${encodeURIComponent(r)}`):t}export{t as i,n,i as r,r as t};
