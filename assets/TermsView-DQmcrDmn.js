@@ -1,1 +1,0 @@
-import{B as e,T as t,_ as n,w as r,x as i}from"./vue-i18n-BL6Rhtrp.js";import{g as a}from"./index-B3L8hQeR.js";import{n as o,t as s}from"./legal-DbxNdeEs.js";var c={"data-seo-ready":`terms`},l=t({__name:`TermsView`,setup(t){let{currentLocale:l}=a(),u=n(()=>s(`terms`,l.value));return(t,n)=>(e(),i(`div`,c,[r(o,{content:u.value},null,8,[`content`])]))}});export{l as default};
